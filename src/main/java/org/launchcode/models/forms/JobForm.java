@@ -21,6 +21,9 @@ public class JobForm {
 
     @NotNull
     private int employerId;
+    private int locationId;
+    private int positionTypeId;
+    private int coreCompetencyId;
 
     /*
         TODO #3 - Included other fields needed to create a job,
@@ -42,8 +45,12 @@ public class JobForm {
         */
 
         employers = jobData.getEmployers().findAll();
+        locations = jobData.getLocations().findAll();
+        coreCompetencies = jobData.getCoreCompetencies().findAll();
+        positionTypes = jobData.getPositionTypes().findAll();
 
     }
+
 
     public String getName() {
         return name;
@@ -60,7 +67,27 @@ public class JobForm {
     public void setEmployerId(int employerId) {
         this.employerId = employerId;
     }
+    public int getLocationId() {
+        return locationId;
+    }
 
+    public void setlocationId(int locationId) {
+        this.locationId = locationId;
+    }
+    public int getPositionTypeId() {
+        return positionTypeId;
+    }
+
+    public void setPositionTypeId(int positionTypeId) {
+        this.positionTypeId = positionTypeId;
+    }
+    public int getCoreCompetencyId() {
+        return coreCompetencyId;
+    }
+
+    public void setCoreCompetencyId(int coreCompetencyId) {
+        this.coreCompetencyId= coreCompetencyId;
+    }
     public ArrayList<Employer> getEmployers() {
         return employers;
     }
@@ -93,3 +120,4 @@ public class JobForm {
         this.positionTypes = positionTypes;
     }
 }
+
